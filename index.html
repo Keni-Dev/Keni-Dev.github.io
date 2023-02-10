@@ -37,7 +37,7 @@
         }
     </style>
 </head>
-<body>
+<body style="display:none">
     <div>
         <h1>WILL YOU BE MY <br> VALENTINE??</h1>
         <div class="buttons">
@@ -56,6 +56,9 @@
     </div>
 
     <script type="text/javascript">
+	window.onload = function () {
+		document.body.style.display="block";
+} 
         document.getElementById("FUCK").addEventListener("click", YESH);
 
         var vid = document.getElementById("video");
