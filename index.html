@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHEEESH</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        div {
+            text-align: center;
+            vertical-align: center;
+            align-items: center;
+        }
+
+        .buttons {
+            display: inline-block;
+            vertical-align: center;
+            padding-right:40px;
+        }
+
+        #NO {
+            position: absolute;
+        }
+
+        .images {
+            animation: fadeInOut 2s linear 1;
+        }
+
+        @keyframes fadeInOut {
+            0% { opacity:0; }
+            100% { opacity:1; } 
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>WILL YOU BE MY <br> VALENTINE??</h1>
+        <div class="buttons">
+            <button id="FUCK">YES</button>
+            <button id="NO" style="z-index: 10;">NO</button>
+        </div>
+    </div>
+
+    <audio id="audio">
+        <source src="media/past lives.mp3">
+    </audio>
+
+    <div class="images" id="images" style="display: none; margin-top: 75px;">
+        <img src="images/cta.jfif" alt="" id="image">
+        <video src="barabara.mp4" id="video" style="display: none; width: 90vw;"></video>
+    </div>
+
+    <script type="text/javascript">
+        document.getElementById("FUCK").addEventListener("click", YESH);
+
+        var vid = document.getElementById("video");
+        vid.load();
+    
+        function YESH() {
+            var imgSHESH = document.getElementById("image");
+            imgSHESH.style.display = "none";
+            
+            document.getElementById("images").style.display = "block";
+
+            NOTMUSHEESH();
+            
+            vid.style.display = "inline-block";
+
+            document.body.style.backgroundImage = "url('images/konpepti.gif')";
+            
+            vid.play();
+            document.getElementById("NO").style.display = "none";
+        }
+
+        var audio = document.getElementById("audio");
+        audio.load();
+        function MUSHEEESH () {
+            audio.play();    
+        }
+        function NOTMUSHEESH() {
+            audio.pause();
+        }
+
+        var shit = document.getElementById("NO");
+        shit.addEventListener("click", FUUCKKKNOOOOO);
+
+        var div = document.getElementById("images");
+        var btn = document.getElementById("NO");
+
+        var count = 0;
+
+        function FUUCKKKNOOOOO() {
+            var fok = Math.floor(Math.random()*innerHeight/2)+1;
+            var shesh = Math.floor(Math.random()*innerWidth/1.5)+1;
+
+            var HE = Math.min(Math.max((fok), 1), innerHeight);
+            var EY = Math.min(Math.max((shesh), 1), innerWidth);
+
+            shit.style.left = HE+"px";
+            shit.style.top = EY+"px";
+
+
+            var imgSHESH = document.getElementById("images");
+            var img = document.getElementById("image");
+
+            document.body.style.backgroundImage = "url('images/FRRX.gif')";
+            document.body.style.backgroundRepeat = "no-repeat";
+            document.body.style.backgroundSize = "cover";
+
+            MUSHEEESH();
+            imgSHESH.style.display = "block";
+            imgSHESH.style.marginTop = "75px";
+            img.style.display = "inline-block";
+            // img.style.animation = "fadeInOut 2s linear 1";
+            
+
+            if (count == 3) {
+                img.src = "images/pepe.jfif";
+                img.classList.add("images");
+                setTimeout(()=>{ img.classList.remove("images");}, 500);
+            }
+            else if (count == 6) {
+                img.src = "images/jordan.jfif";
+                img.classList.add("images");
+                setTimeout(()=>{ img.classList.remove("images");}, 500);
+            }
+            else if (count == 9) {
+                img.src = "images/cowboi.jfif";
+                img.classList.add("images");
+                setTimeout(()=>{ img.classList.remove("images");}, 500);
+            }
+            else if (count == 12) {
+                img.src = "images/cta.jfif";
+                img.classList.add("images");
+                setTimeout(()=>{ img.classList.remove("images");}, 500);
+                count = 1;
+            }
+
+            count++;
+        }
+    </script>
+</body>
+</html>
